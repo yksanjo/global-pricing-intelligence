@@ -1,112 +1,82 @@
-# Global Pricing Intelligence Engine 💰
+# global-pricing-intelligence
 
-A high-compute scraping project that monitors e-commerce prices, SaaS pricing pages, and marketplace listings in real-time. Build dynamic pricing strategies, detect dark patterns, and model demand elasticity.
+## Detailed Description
 
-## 🎯 Project Overview
+global-pricing-intelligence is maintained as an industry-grade software project with production-ready engineering practices.  
+This repository includes documented setup, quality gates, operational guidance, and governance standards so contributors can safely build, test, and ship changes with confidence.
 
-**Goal**: Create a comprehensive pricing intelligence system to:
-- Monitor prices across major e-commerce platforms
-- Track SaaS pricing page changes
-- Detect dark patterns and manipulation tactics
-- Model competitive pricing strategies
-- Alert on price changes and arbitrage opportunities
+## Problem Statement
 
-## 🏗️ Architecture
+Describe the user or business problem this project solves, the target users, and expected outcomes.
 
+## Solution Overview
+
+Summarize the architecture, core modules, and runtime behavior at a high level.
+
+## Key Features
+
+- Clear project scope and intended use.
+- Reproducible local development workflow.
+- Test coverage and CI quality gates.
+- Security and contribution policies.
+- Deployment-ready repository structure.
+
+## Repository Structure
+
+```text
+.
+|-- src/                  # Core implementation
+|-- tests/                # Automated test suites
+|-- docs/                 # Design notes and operational docs
+|-- .github/workflows/    # CI pipelines
+|-- README.md
+|-- LICENSE
+|-- CONTRIBUTING.md
+|-- SECURITY.md
+|-- CODE_OF_CONDUCT.md
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                Global Pricing Intelligence Engine             │
-├─────────────────────────────────────────────────────────────┤
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────┐   │
-│  │   Price     │  │  Change    │  │   Analytics     │   │
-│  │   Scrapers  │──▶│  Detector  │──▶│   Engine       │   │
-│  └─────────────┘  └─────────────┘  └─────────────────┘   │
-│                   └─────────────┘  ┌─────────────────┐   │
-│  ┌─────────────┐  ┌─────────────┐  │   Alert        │   │
-│  │  Headless   │  │  Database   │  │   System       │   │
-│  │  Browser    │  │ (PostgreSQL)│  └─────────────────┘   │
-│  └─────────────┘  └─────────────┘                          │
-└─────────────────────────────────────────────────────────────┘
-```
 
-## 📊 Data Sources
+## Getting Started
 
-- **Amazon & Shopify**: Product listings and pricing
-- **SaaS Pricing Pages**: Stripe connected stores
-- **Marketplaces**: eBay, Etsy, Walmart
-- **Travel Sites**: Booking, Expedia, Airbnb
-- **Competitor Tracking**: Custom target lists
+### Prerequisites
 
-## 🔧 Tech Stack
+- Git
+- Project runtime/toolchain for this repo
 
-- **Language**: Python + TypeScript
-- **Scraping**: Playwright, Puppeteer, Scrapy
-- **Headless**: Chromium automation
-- **Database**: PostgreSQL + TimescaleDB
-- **API**: FastAPI
-- **Queue**: Redis + Celery
-- **Detection**: NLP for dark patterns
-
-## 🚀 Getting Started
+### Local Setup
 
 ```bash
-# Clone the repo
-git clone https://github.com/yksanjo/global-pricing-intelligence.git
-cd global-pricing-intelligence
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Set up environment
-cp .env.example .env
-
-# Run the scraper
-python src/scrapers/amazon_scraper.py
-
-# Start the API
-uvicorn src.api.main:app --reload
+make test
+make lint
 ```
 
-## 📈 Features
+## Usage
 
-- [ ] Multi-platform price monitoring
-- [ ] Real-time change detection
-- [ ] Dark pattern identification
-- [ ] Dynamic pricing strategy analysis
-- [ ] Demand elasticity modeling
-- [ ] Price alert system
-- [ ] Historical trend visualization
+Document primary commands, API routes, CLI examples, or UI workflows here.
 
-## 📊 Project Phases
+## Quality Standards
 
-### Phase 1: Collection
-- E-commerce scrapers
-- SaaS pricing page miner
-- Marketplace aggregators
+- CI must pass before merge.
+- Changes require tests for critical behavior.
+- Security-sensitive changes should include risk notes.
+- Keep pull requests focused and reviewable.
 
-### Phase 2: Analysis
-- Price change detection
-- Pattern recognition
-- Competitor benchmarking
+## Security
 
-### Phase 3: Intelligence
-- Demand modeling
-- Elasticity calculations
-- Strategy recommendations
+See `SECURITY.md` for responsible disclosure and handling guidelines.
 
-### Phase 4: Alerts & UI
-- Real-time notifications
-- Dashboard analytics
-- API access
+## Contributing
 
-## 📝 License
+See `CONTRIBUTING.md` for branching, commit, and pull request expectations.
 
-MIT License - See [LICENSE](LICENSE) for details.
+## Roadmap
 
-## 👤 Author
+Track upcoming milestones, technical debt, and planned feature work.
 
-Yoshi Kondo - [@yksanjo](https://github.com/yksanjo)
+## Support
 
----
+Open a GitHub issue for bugs, feature requests, or documentation gaps.
 
-💎 Monitor prices, uncover patterns, stay competitive!
+## License
+
+This project is released under the MIT License.
